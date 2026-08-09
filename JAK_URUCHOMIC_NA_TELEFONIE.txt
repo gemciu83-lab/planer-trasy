@@ -1,0 +1,65 @@
+JAK URUCHOMIC PLANER TRASY NA TELEFONIE
+
+Wazne:
+Pelna instalacja jako aplikacja PWA dziala najlepiej z adresem HTTPS.
+Lokalny plik HTML otwarty z folderu dziala do testow, ale GPS, service worker i instalacja moga byc ograniczone.
+
+OPCJA 1 - najprostszy test lokalny
+
+1. Rozpakuj Planer_Trasy_MOBILE_PWA.zip.
+2. Otworz folder PLANER_TRASY_MOBILE_PWA.
+3. Uruchom index.html w Chrome.
+4. To jest dobre do sprawdzenia wygladu, ale nie jest idealne do GPS i instalacji na telefonie.
+
+OPCJA 2 - test na telefonie przez GitHub Pages
+
+1. Zaloz konto na GitHub.
+2. Utworz nowe repozytorium, np. planer-trasy.
+3. Wrzuc do repozytorium zawartosc folderu PLANER_TRASY_MOBILE_PWA:
+   - index.html
+   - manifest.webmanifest
+   - sw.js
+   - ikona_rower_planer.svg
+   - ikona_rower_planer.ico
+   - instrukcje txt
+4. W repozytorium wejdz w Settings.
+5. Wejdz w Pages.
+6. Wybierz:
+   Source: Deploy from a branch
+   Branch: main
+   Folder: /root
+7. Zapisz.
+8. Po chwili GitHub poda link HTTPS.
+9. Otworz ten link na telefonie.
+
+Android Chrome:
+1. Otworz link.
+2. Kliknij trzy kropki.
+3. Wybierz Dodaj do ekranu glownego albo Zainstaluj aplikacje.
+4. Na pulpicie pojawi sie ikona Planer Trasy.
+
+iPhone Safari:
+1. Otworz link w Safari.
+2. Kliknij Udostepnij.
+3. Wybierz Do ekranu poczatkowego.
+4. Potwierdz.
+
+OPCJA 3 - Netlify
+
+1. Wejdz na netlify.com.
+2. Zaloguj sie.
+3. Przeciagnij caly folder PLANER_TRASY_MOBILE_PWA na ekran deploy.
+4. Netlify da gotowy link HTTPS.
+5. Otworz link na telefonie i dodaj do ekranu glownego.
+
+CO JESZCZE TRZEBA DOPRACOWAC W WERSJI MOBILNEJ
+
+1. Lepszy ekran pierwszego uruchomienia.
+2. Opcja zapisu tras lokalnie w pamieci telefonu.
+3. Docelowo mozna dodac komunikaty glosowe w trybie jazdy.
+4. Docelowo mozna dodac ostrzezenia przed DK/DW, lasem albo szutrem w czasie jazdy.
+
+MOJA OCENA AKTUALNEGO STANU
+
+Desktop: nadaje sie do testow i pokazania ludziom.
+Mobile PWA: nadaje sie jako pierwsza wersja testowa z obsluga palca, dolnym panelem ustawien i trybem jazdy GPS.

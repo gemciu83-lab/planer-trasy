@@ -1,0 +1,571 @@
+﻿<!doctype html>
+<!--
+  Planer Trasy - autorski planer petli rowerowych.
+  Autor: Jakub Ahhehh.
+  Prawa zastrzezone. Modyfikacja, sprzedaz lub publikacja zmienionej wersji bez zgody autora jest niedozwolona.
+-->
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#050711">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Planer Trasy">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="author" content="Jakub Ahhehh">
+  <meta name="copyright" content="Jakub Ahhehh 2026">
+  <meta name="rights" content="Prawa zastrzezone. Modyfikacja lub dystrybucja bez zgody autora niedozwolona.">
+  <title>Planer Trasy</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYmciIHgxPSIxNCIgeTE9IjEwIiB4Mj0iMTE0IiB5Mj0iMTE4IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzA1MDcxMSIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjAuNTIiIHN0b3AtY29sb3I9IiMxMjE4NDYiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMzExMDQ1Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJiaWtlIiB4MT0iMTgiIHkxPSI4OCIgeDI9IjExMiIgeTI9IjMyIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzdhZWFmZiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjAuNTUiIHN0b3AtY29sb3I9IiMyZjg2ZmYiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZmYyZmIyIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iMTI4IiBoZWlnaHQ9IjEyOCIgcng9IjI2IiBmaWxsPSJ1cmwoI2JnKSIvPgogIDxwYXRoIGQ9Ik0yMyAzM2MxOS0xMiAzOS0xNiA2MC0xMCAxMCAzIDE4IDggMjUgMTUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmMmZiMiIgc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2UtbGluZWNhcD0icm91bmQiIG9wYWNpdHk9IjAuODUiLz4KICA8Y2lyY2xlIGN4PSIzNiIgY3k9IjgyIiByPSIyMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjN2FlYWZmIiBzdHJva2Utd2lkdGg9IjgiLz4KICA8Y2lyY2xlIGN4PSI5MiIgY3k9IjgyIiByPSIyMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjN2FlYWZmIiBzdHJva2Utd2lkdGg9IjgiLz4KICA8cGF0aCBkPSJNMzYgODJsMjItMzNoMTlsMTUgMzNINjRMNTIgNjBtMTIgMjJMNTggNDltMTkgMGw5LTE1bS0yNCAwaDIybTUgMGgxNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ1cmwoI2Jpa2UpIiBzdHJva2Utd2lkdGg9IjgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogIDxjaXJjbGUgY3g9IjU4IiBjeT0iNDkiIHI9IjUiIGZpbGw9IiNmOGY0ZmYiLz4KICA8cGF0aCBkPSJNMjggMTA1aDcyIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZjJmYjIiIHN0cm9rZS13aWR0aD0iNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBvcGFjaXR5PSIwLjkiLz4KPC9zdmc+Cg==">
+  <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYmciIHgxPSIxNCIgeTE9IjEwIiB4Mj0iMTE0IiB5Mj0iMTE4IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzA1MDcxMSIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjAuNTIiIHN0b3AtY29sb3I9IiMxMjE4NDYiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMzExMDQ1Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJiaWtlIiB4MT0iMTgiIHkxPSI4OCIgeDI9IjExMiIgeTI9IjMyIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzdhZWFmZiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjAuNTUiIHN0b3AtY29sb3I9IiMyZjg2ZmYiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZmYyZmIyIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iMTI4IiBoZWlnaHQ9IjEyOCIgcng9IjI2IiBmaWxsPSJ1cmwoI2JnKSIvPgogIDxwYXRoIGQ9Ik0yMyAzM2MxOS0xMiAzOS0xNiA2MC0xMCAxMCAzIDE4IDggMjUgMTUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmMmZiMiIgc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2UtbGluZWNhcD0icm91bmQiIG9wYWNpdHk9IjAuODUiLz4KICA8Y2lyY2xlIGN4PSIzNiIgY3k9IjgyIiByPSIyMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjN2FlYWZmIiBzdHJva2Utd2lkdGg9IjgiLz4KICA8Y2lyY2xlIGN4PSI5MiIgY3k9IjgyIiByPSIyMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjN2FlYWZmIiBzdHJva2Utd2lkdGg9IjgiLz4KICA8cGF0aCBkPSJNMzYgODJsMjItMzNoMTlsMTUgMzNINjRMNTIgNjBtMTIgMjJMNTggNDltMTkgMGw5LTE1bS0yNCAwaDIybTUgMGgxNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ1cmwoI2Jpa2UpIiBzdHJva2Utd2lkdGg9IjgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogIDxjaXJjbGUgY3g9IjU4IiBjeT0iNDkiIHI9IjUiIGZpbGw9IiNmOGY0ZmYiLz4KICA8cGF0aCBkPSJNMjggMTA1aDcyIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZjJmYjIiIHN0cm9rZS13aWR0aD0iNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBvcGFjaXR5PSIwLjkiLz4KPC9zdmc+Cg==">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="app.css?v=route-engine-pro-custom-distance-2026-08-09-v37">
+</head>
+<body class="top-menu-collapsed">
+  <div class="app">
+    <header class="app-header">
+      <button class="menu-open" id="menuOpenBtn" type="button">Menu</button>
+      <div>
+        <h1>Planer Trasy</h1>
+        <p>płaskie pętle rowerowe, GPS, OSM i ręczna korekta trasy</p>
+      </div>
+      <div class="bike-clock" aria-live="polite">
+        <span class="clock-date" id="clockDate">--.--.----</span>
+        <span class="clock-time" id="clockTime">--:--:--</span>
+      </div>
+    </header>
+
+    <section class="app-menu-overlay visible" id="appMenu" aria-hidden="false">
+      <div class="menu-shell" role="dialog" aria-modal="true" aria-labelledby="menuTitle">
+        <button class="menu-close" id="menuCloseBtn" type="button" aria-label="Zamknij menu">×</button>
+        <div class="menu-hero">
+          <div class="menu-title">
+            <h2 id="menuTitle">Planer Trasy</h2>
+            <p>Centrum programu: szybki powrót do mapy i krótki opis najważniejszych funkcji.</p>
+          </div>
+          <div class="menu-visual" aria-hidden="true"></div>
+        </div>
+        <div class="menu-grid" role="tablist" aria-label="Menu programu">
+          <button class="menu-card active" type="button" data-menu-view="planner">
+            <strong>Planer trasy</strong>
+            <span>Wraca do mapy, generatora pętli, edycji punktów i profilu wysokości.</span>
+          </button>
+          <button class="menu-card" type="button" data-menu-view="help">
+            <strong>Pomoc</strong>
+            <span>Krótki opis najważniejszych funkcji i zasad pracy z trasą.</span>
+          </button>
+        </div>
+        <div class="menu-detail">
+          <div class="menu-panel active" id="menuPanelPlanner">
+            <div class="menu-info">
+              <h3>Mapa jest główna</h3>
+              <p>Menu jest tylko warstwą pomocniczą. Zamknij menu, żeby wrócić do pracy na mapie.</p>
+            </div>
+            <div class="menu-info">
+              <h3>Szybki start</h3>
+              <p>Ustaw start z GPS, wpisz dystans pętli, promień i kliknij Szukaj płaskiej pętli.</p>
+            </div>
+            <div class="menu-info">
+              <h3>Edycja</h3>
+              <p>Punkty można przeciągać, dodawać na linii trasy i usuwać z menu punktu.</p>
+            </div>
+          </div>
+          <div class="menu-panel" id="menuPanelHelp">
+            <div class="menu-info">
+              <h3>Planowanie</h3>
+              <ul>
+                <li>Pętla wraca do punktu startowego.</li>
+                <li>Start → Meta liczy trasę z punktu A do punktu B.</li>
+                <li>Szosowo mocniej pilnuje asfaltu.</li>
+                <li>Zbalansowany wybiera kompromis.</li>
+                <li>Przygoda dopuszcza więcej terenu.</li>
+              </ul>
+            </div>
+            <div class="menu-info">
+              <h3>Obszar</h3>
+              <p>Włącz Rysuj obszar i obrysuj teren prawym przyciskiem myszy. Generator szuka pętli głównie w tym obszarze.</p>
+            </div>
+            <div class="menu-info">
+              <h3>GPX</h3>
+              <p>Możesz eksportować trasę do licznika albo wczytać GPX i edytować go jak własną trasę.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <button class="mobile-settings-toggle" id="mobileSettingsToggle" type="button">Ustawienia trasy</button>
+
+    <aside class="sidebar" id="settingsPanel">
+      <section class="group start-group">
+        <h2>Start / Edycja</h2>
+        <div class="field">
+          <label for="searchInput">Adres lub miejscowość <span class="help" tabindex="0" data-tip="Wpisz miasto, adres albo punkt startowy. Wynik z OpenStreetMap ustawi start trasy.">?</span></label>
+          <input id="searchInput" type="text" value="Warszawa, Polska" autocomplete="off">
+          <div class="compact-actions">
+            <button class="button blue" id="searchBtn" type="button">Szukaj na mapie</button>
+            <button class="button secondary" id="gpsBtn" type="button">Użyj mojej lokalizacji GPS</button>
+            <button class="button secondary" id="pickStartBtn" type="button">Start z mapy</button>
+          </div>
+          <div class="result-list" id="results"></div>
+        </div>
+        <div class="field">
+          <label for="finishInput">Meta / punkt B <span class="help" tabindex="0" data-tip="Używane w trybie Start → Meta. Wpisz miejscowość/adres mety albo ustaw metę kliknięciem na mapie.">?</span></label>
+          <input id="finishInput" type="text" placeholder="Meta trasy, np. Łódź, Polska" autocomplete="off">
+          <div class="compact-actions two">
+            <button class="button secondary" id="searchFinishBtn" type="button">Szukaj mety</button>
+            <button class="button secondary" id="pickFinishBtn" type="button">Meta z mapy</button>
+          </div>
+        </div>
+        <label class="check"><input id="autoReroute" type="checkbox" checked> Przelicz po przeciągnięciu punktu <span class="help" tabindex="0" data-tip="Po przesunięciu punktu trasa przeliczy się automatycznie. Gdy odznaczysz, ręcznie użyj przycisku Przelicz z punktów.">?</span></label>
+      </section>
+
+      <section class="group loop-group">
+        <h2>Planowanie</h2>
+        <div class="compact-grid four">
+          <div class="field">
+            <label for="routeMode">Typ trasy <span class="help" tabindex="0" data-tip="Pętla: program sam szuka pętli według ustawień. Start → Meta: ustaw S i M, potem wybierz najbliższą trasę albo trasę pod dystans. Własna trasa: obecne S jest startem, każdy klik dodaje punkt, szkic łączy się od razu, a trasa po drogach przelicza się chwilę po ostatnim kliknięciu.">?</span></label>
+            <select id="routeMode">
+              <option value="loop">Pętla</option>
+              <option value="point">Start → Meta</option>
+              <option value="custom" selected>Własna trasa</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="targetKm">Dystans km <span class="help" tabindex="0" data-tip="Docelowa długość pętli albo trasy A→B. Wynik może się różnić, bo routing musi trzymać się realnych dróg.">?</span></label>
+            <input id="targetKm" type="number" min="5" max="260" step="5" value="100">
+          </div>
+          <div class="field">
+            <label for="maxRadiusKm">Promień km <span class="help" tabindex="0" data-tip="Maksymalny zasięg szukania od startu. Jeśli narysujesz obszar, obszar jest ważniejszy od promienia.">?</span></label>
+            <input id="maxRadiusKm" type="number" min="2" max="80" step="1" value="25">
+          </div>
+          <div class="field">
+            <label for="lapCount">Pętle <span class="help" tabindex="0" data-tip="Ile razy powtórzyć wyznaczoną pętlę w statystykach treningu. Przykład: 20 km x 5 = 100 km.">?</span></label>
+            <input id="lapCount" type="number" min="1" max="20" step="1" value="1">
+          </div>
+        </div>
+                <details class="advanced-settings" open>
+          <summary>Zaawansowane: nachylenia, warianty, tempo, kcal</summary>
+          <div class="advanced-body">
+            <div class="field">
+          <div class="field-row">
+            <label for="flatWeight">Waga płaskości <span class="help" tabindex="0" data-tip="Im wyżej, tym mocniej program karze podjazdy i strome fragmenty.">?</span></label>
+            <output id="flatWeightOut">80%</output>
+          </div>
+          <input id="flatWeight" type="range" min="0" max="100" step="5" value="80">
+        </div>
+        <div class="field">
+          <div class="field-row">
+            <label for="attempts">Warianty tras <span class="help" tabindex="0" data-tip="Ile propozycji program ma policzyć. Mniej wariantów działa szybciej, więcej daje większą szansę na lepszą trasę. Dla szybkiego testu ustaw 3-5, dla dokładniejszego szukania 8-12.">?</span></label>
+            <output id="attemptsOut">5</output>
+          </div>
+          <input id="attempts" type="range" min="1" max="15" step="1" value="5">
+        </div>
+        <div class="compact-grid three">
+          <div class="field">
+            <label for="maxGrade">Max % <span class="help" tabindex="0" data-tip="Maksymalne akceptowane nachylenie. Odcinki powyżej tej wartości dostają karę przy wyborze wariantu. Zakres do 30%, bo czasem świadomie chcesz mocniejszy teren.">?</span></label>
+            <input id="maxGrade" type="number" min="1" max="30" step="0.5" value="4">
+          </div>
+          <div class="field">
+            <label for="targetGrade">Cel podjazdu % <span class="help" tabindex="0" data-tip="0 oznacza brak wymuszania podjazdów. Jeśli wpiszesz np. 8-10%, program będzie wyżej oceniał warianty, które realnie mają taki mocniejszy podjazd, o ile da się to znaleźć po drogach.">?</span></label>
+            <input id="targetGrade" type="number" min="0" max="30" step="0.5" value="0">
+          </div>
+          <div class="field">
+            <label for="avgSpeed">Średnia jazdy km/h <span class="help" tabindex="0" data-tip="Twoja planowana średnia. Na jej podstawie liczony jest szacowany czas trasy.">?</span></label>
+            <input id="avgSpeed" type="number" min="8" max="45" step="1" value="20">
+          </div>
+        </div>
+        <div class="compact-grid four">
+          <div class="field">
+            <label for="riderWeight">Masa kg <span class="help" tabindex="0" data-tip="Masa rowerzysty używana do orientacyjnego liczenia kalorii. To szacunek treningowy, nie pomiar medyczny.">?</span></label>
+            <input id="riderWeight" type="number" min="35" max="180" step="1" value="80">
+          </div>
+          <div class="field">
+            <label for="bikeWeight">Rower kg <span class="help" tabindex="0" data-tip="Masa roweru z bidonami i wyposażeniem. Cięższy rower podnosi koszt jazdy, szczególnie na podjazdach i gorszej nawierzchni.">?</span></label>
+            <input id="bikeWeight" type="number" min="5" max="35" step="0.5" value="10">
+          </div>
+          <div class="field">
+            <label for="bikeType">Rower <span class="help" tabindex="0" data-tip="Typ roweru zmienia orientacyjny współczynnik spalania: szosa zwykle najmniej, MTB/przygoda więcej.">?</span></label>
+            <select id="bikeType">
+              <option value="road">Szosowy</option>
+              <option value="gravel" selected>Gravel / trekking</option>
+              <option value="mtb">MTB</option>
+              <option value="city">Miejski / cięższy</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Kalorie <span class="help" tabindex="0" data-tip="Orientacyjne spalanie z dystansu, masy rowerzysty, typu roweru i podjazdów. Wynik pokazuje też kafel Kcal na mapie.">?</span></label>
+            <output id="calorieEstimateOut">0 kcal</output>
+          </div>
+        </div>
+        <div class="compact-grid one">
+          <div class="field">
+            <label>Czas treningu <span class="help" tabindex="0" data-tip="Dystans jednej pętli pomnożony przez liczbę pętli i podzielony przez średnią prędkość. Bez postojów.">?</span></label>
+            <output id="timeEstimateOut">0:00</output>
+          </div>
+        </div>
+        <label class="check"><input id="repeatGpx" type="checkbox" checked> GPX jako pełny trening <span class="help" tabindex="0" data-tip="Gdy zaznaczone, eksport GPX powiela tę samą pętlę tyle razy, ile wpiszesz w polu Pętle.">?</span></label>
+          </div>
+        </details>
+      </section>
+
+      <section class="group edit-group">
+        <h2>Opcje / akcja</h2>
+        <div class="field">
+          <label for="routePreset">Tryb trasy <span class="help" tabindex="0" data-tip="Ładna trasa premiuje ciekawe miejsca, lokalne drogi, ścieżki rowerowe i spokojny asfalt. Szosowo mocno preferuje asfalt i unika lasu. Przygoda dopuszcza więcej szutru i lasu.">?</span></label>
+          <select id="routePreset">
+            <option value="balanced" selected>Zbalansowany</option>
+            <option value="scenic">Ładna trasa</option>
+            <option value="road">Szosowo</option>
+            <option value="adventure">Przygoda</option>
+          </select>
+          <div class="preset-desc" id="presetDescription">Zbalansowany: kompromis między płaskością, asfaltem i spokojnymi drogami.</div>
+        </div>
+                <details class="advanced-settings route-rules-settings" open>
+          <summary>Drogi, mapa i wygląd</summary>
+          <div class="advanced-body">
+            <div class="compact-grid three">
+          <div class="field">
+            <label for="mapStyle">Mapa <span class="help" tabindex="0" data-tip="Zmienia podklad mapy: klasyczny OpenStreetMap, rowerowy, topograficzny albo satelitarny. Mapa rowerowa ma zapasowy serwer, gdy CyclOSM chwilowo nie odpowiada.">?</span></label>
+            <select id="mapStyle">
+              <option value="osm" selected>OpenStreetMap</option>
+              <option value="cycle">Rowerowa OSM</option>
+              <option value="topo">Topograficzna</option>
+              <option value="satellite">Satelitarna</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="themeStyle">Motyw <span class="help" tabindex="0" data-tip="Zmienia wygląd programu. Carbon Pro to ciemny stalowy motyw premium; Neon jest bardziej kolorowy, Grafit / złoto jest cieplejszy.">?</span></label>
+            <select id="themeStyle">
+              <option value="carbon">Carbon Pro</option>
+              <option value="neon" selected>Neon</option>
+              <option value="ember">Grafit / złoto PRO</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="roadStrictness">Kara DK <span class="help" tabindex="0" data-tip="Jak mocno karać większe drogi, szczególnie krajowe. Wyższa wartość mocniej wypycha trasę na lokalne drogi.">?</span></label>
+            <input id="roadStrictness" type="number" min="0" max="10" step="1" value="8">
+          </div>
+        </div>
+        <div class="option-grid">
+          <label class="check"><input id="avoidNationalRoads" type="checkbox" checked> DK <span class="help" tabindex="0" data-tip="Zaznaczone oznacza: unikaj dróg krajowych. To bardzo mocna reguła wyboru wariantu.">?</span></label>
+          <label class="check"><input id="avoidVoivodeshipRoads" type="checkbox"> DW <span class="help" tabindex="0" data-tip="Zaznaczone oznacza: unikaj dróg wojewódzkich. Przydatne tam, gdzie DW są ruchliwe.">?</span></label>
+          <label class="check"><input id="avoidForestAuto" type="checkbox" checked> las <span class="help" tabindex="0" data-tip="Zaznaczone oznacza: mocno odrzucaj las, szczególnie dukty, szuter i piach przez las.">?</span></label>
+          <label class="check"><input id="preferAsphalt" type="checkbox" checked> asfalt <span class="help" tabindex="0" data-tip="Zaznaczone oznacza: wybieraj asfalt i drogi utwardzone; piasek, ziemia, trawa i szuter dostają bardzo ostrą karę.">?</span></label>
+          <label class="check"><input id="preferBikeRoutes" type="checkbox" checked> rowerowe <span class="help" tabindex="0" data-tip="Premiuje drogi i oznaczenia rowerowe z OSM oraz spokojniejsze lokalne odcinki.">?</span></label>
+          <input id="showFoodShops" type="checkbox" hidden aria-hidden="true">
+          <input id="showAttractions" type="checkbox" hidden aria-hidden="true">
+        </div>
+                  </div>
+        </details>
+        <div class="compact-actions">
+          <button class="button" id="loopBtn" type="button">Szukaj płaskiej pętli</button>
+          <button class="button secondary" id="rerouteBtn" type="button">Przelicz z punktów</button>
+        </div>
+      </section>
+    </aside>
+
+    <section class="map-action-bar" aria-label="Narzędzia mapy">
+      <div class="map-tool">
+        <button class="button amber" id="addPointBtn" type="button">Dodaj punkt</button>
+        <span class="help" tabindex="0" data-tip="Kliknij mapę albo zieloną linię trasy, żeby dodać punkt pośredni. Punkt możesz potem przeciągnąć.">?</span>
+      </div>
+      <div class="map-tool">
+        <button class="button blue" id="drawAreaBtn" type="button">Rysuj obszar</button>
+        <span class="help" tabindex="0" data-tip="Włącz tryb i narysuj obszar prawym przyciskiem myszy. Generator będzie szukał pętli w tym obszarze.">?</span>
+      </div>
+      <div class="map-tool">
+        <button class="button secondary" id="clearAreaBtn" type="button">Wyczyść obszar</button>
+        <span class="help" tabindex="0" data-tip="Usuwa narysowany obszar. Po usunięciu generator znowu używa promienia od startu.">?</span>
+      </div>
+      <div class="map-tool">
+        <button class="button secondary" id="clearBtn" type="button">Wyczyść trasę</button>
+        <span class="help" tabindex="0" data-tip="Czyści aktualną trasę i punkty pośrednie, zostawia start.">?</span>
+      </div>
+      <div class="map-tool">
+        <button class="button violet" id="randomRouteBtn" type="button">Losuj trasę</button>
+        <span class="help" tabindex="0" data-tip="Wymusza nową serię kandydatów i próbuje ominąć ostatnio wybraną pętlę.">?</span>
+      </div>
+      <div class="map-tool">
+        <button class="button secondary" id="reverseRouteBtn" type="button">Odwróć kierunek</button>
+        <span class="help" tabindex="0" data-tip="Odwraca kierunek jazdy po tej samej trasie. Przy pętli pozwala sprawdzić, czy dany odcinek jest podjazdem czy zjazdem w drugą stronę.">?</span>
+      </div>
+      <div class="map-tool">
+        <button class="button violet" id="manualCorrectionBtn" type="button">Korekta odcinka</button>
+        <span class="help" tabindex="0" data-tip="Włącz, kliknij linię trasy i ręcznie oznacz odcinek jako podjazd, zjazd, złą drogę albo OK. To poprawia kolor i kontrolę trasy bez zmiany GPX.">?</span>
+      </div>
+      <div class="map-tool">
+        <button class="button blue" id="weatherBtn" type="button">Pogoda trasy</button>
+        <span class="help" tabindex="0" data-tip="Pobiera prognozę Open-Meteo dla punktów na trasie według szacowanego czasu przejazdu: temperatura, deszcz, wiatr, porywy i kierunek względem jazdy.">?</span>
+      </div>
+      <label class="map-tool map-break-tool">
+        <span class="mini-field-label">Przerwy co km</span>
+        <input id="breakEveryKm" type="number" min="0" max="200" step="1" value="20">
+        <span class="help" tabindex="0" data-tip="Symuluje planowane postoje na trasie. Wpisz np. 20, a na linii trasy pojawią się znaczniki P1, P2, P3 co 20 km. Wpisz 0, żeby ukryć znaczniki.">?</span>
+      </label>
+      <div class="map-tool">
+        <button class="button secondary" id="gpxBtn" type="button">Zapisz GPX</button>
+        <span class="help" tabindex="0" data-tip="Zapisuje ślad trasy jako plik GPX do zegarka, licznika rowerowego albo innej aplikacji.">?</span>
+      </div>
+      <div class="map-tool">
+        <button class="button blue" id="importGpxBtn" type="button">Wczytaj GPX</button>
+        <input id="importGpxFile" type="file" accept=".gpx,application/gpx+xml,application/xml,text/xml">
+        <span class="help" tabindex="0" data-tip="Wczytuje plik GPX z zegarka, licznika, Stravy albo innej aplikacji i pokazuje go na mapie.">?</span>
+      </div>
+      <div class="map-tool">
+        <button class="button secondary" id="copyShotBtn" type="button">Kopiuj PNG</button>
+        <span class="help" tabindex="0" data-tip="Kopiuje do schowka zrzut mapy ze statystykami i profilem. Przed zrzutem planer sam dopasuje widok do całej trasy.">?</span>
+      </div>
+      <div class="map-tool">
+        <button class="button secondary" id="downloadShotBtn" type="button">Pobierz PNG</button>
+        <span class="help" tabindex="0" data-tip="Pobiera PNG z mapą, statystykami i profilem. Przed pobraniem planer sam wyskaluje widok do całego śladu.">?</span>
+      </div>
+    </section>
+    <div class="top-menu-toggle-row screenshot-ignore">
+      <button class="top-menu-toggle" id="topMenuToggleBtn" type="button" aria-expanded="false">Rozwiń górne menu</button>
+      <button class="top-route-load" id="quickImportTopBtn" type="button" title="Wczytaj plik GPX bez rozwijania całego menu">Wczytaj trasę</button>
+    </div>
+
+    <main class="map-wrap">
+      <div id="map"></div>
+      <div class="map-bottom-actions screenshot-ignore collapsed" aria-label="Szybkie narzędzia mapy">
+        <div class="map-menu-items" id="mapMenuItems">
+          <button class="map-bottom-button primary" id="quickFullscreenBtn" type="button">Pełny widok</button>
+          <button class="map-bottom-button" id="routeStopsBtn" type="button">Sklepy trasy</button>
+          <button class="map-bottom-button" id="routeAttractionsBtn" type="button">Atrakcje trasy</button>
+          <button class="map-bottom-button" id="routeReportBtn" type="button">Kontrola</button>
+          <button class="map-bottom-button" id="routeLodgingBtn" type="button">Noclegi trasy</button>
+          <button class="map-bottom-button" id="quickCorrectionBtn" type="button">Korekta</button>
+          <button class="map-bottom-button" id="routeColorBtn" type="button">Kolor: podjazdy</button>
+          <div class="map-layer-menu">
+            <button class="map-bottom-button" type="button">Warstwy</button>
+            <div class="map-layer-panel" aria-label="Warstwy mapy">
+              <strong>Warstwy mapy</strong>
+              <label><input id="layerClimbsToggle" type="checkbox" checked> Podjazdy %</label>
+              <label><input id="layerFatigueToggle" type="checkbox" checked> Ciężkie odcinki</label>
+              <label><input id="layerWeatherToggle" type="checkbox" checked> Pogoda</label>
+              <label><input id="layerBreaksToggle" type="checkbox" checked> Przerwy</label>
+              <label><input id="layerPoisToggle" type="checkbox" checked> Sklepy / AT / NO</label>
+              <label><input id="layerCorrectionsToggle" type="checkbox" checked> Korekty</label>
+            </div>
+          </div>
+        </div>
+        <button class="map-bottom-button map-menu-toggle" id="mapMenuToggleBtn" type="button" aria-expanded="false">Menu mapy</button>
+      </div>
+      <div class="fullscreen-map-actions screenshot-ignore" aria-label="Narzędzia pełnego ekranu">
+        <button class="fullscreen-map-button" id="fullscreenReportBtn" type="button">Kontrola</button>
+        <button class="fullscreen-map-button" id="fullscreenLodgingBtn" type="button">Noclegi</button>
+        <button class="fullscreen-map-button" id="fullscreenStopsBtn" type="button">Sklepy trasy</button>
+        <button class="fullscreen-map-button" id="fullscreenRouteAttractionsBtn" type="button">Atrakcje trasy</button>
+        <button class="fullscreen-map-button" id="fullscreenColorBtn" type="button">Kolor</button>
+        <button class="fullscreen-map-button" id="fullscreenCorrectionBtn" type="button">Korekta</button>
+        <button class="fullscreen-map-button" id="fullscreenCopyShotBtn" type="button">Kopiuj PNG</button>
+        <button class="fullscreen-map-button primary" id="fullscreenDownloadShotBtn" type="button">Pobierz PNG</button>
+        <button class="fullscreen-map-button" id="fullscreenExitBtn" type="button">Zamknij</button>
+        <button class="fullscreen-map-button fullscreen-menu-toggle" id="fullscreenMenuToggleBtn" type="button" aria-expanded="true">Zwiń</button>
+      </div>
+      <div class="map-busy-timer" id="mapBusyTimer" aria-live="polite">
+        <div class="map-busy-label" id="mapBusyLabel">Liczenie trasy</div>
+        <div class="map-busy-time" id="mapBusyElapsed">00:00</div>
+        <div class="map-busy-eta" id="mapBusyEta">Szacuję czas...</div>
+      </div>
+      <section class="variant-panel" id="variantPanel" aria-label="Warianty trasy">
+        <div class="variant-head">
+          <span id="variantTitle">Najlepsze warianty</span>
+          <button class="button secondary" id="hideVariantsBtn" type="button">Ukryj</button>
+        </div>
+        <div class="variant-list" id="variantList"></div>
+      </section>
+      <button class="variant-toggle" id="showVariantsBtn" type="button">Pokaż warianty</button>
+      <section class="route-report-panel" id="routeReportPanel" aria-label="Kontrola trasy">
+        <div class="report-head">
+          <span id="routeReportTitle">Kontrola trasy</span>
+          <button class="button secondary" id="routeReportCloseBtn" type="button">Ukryj</button>
+        </div>
+        <div class="report-summary" id="routeReportSummary"></div>
+        <div class="report-details" id="routeReportDetails"></div>
+        <div class="report-scroll">
+          <div class="report-section-title">Co jest przy trasie</div>
+          <div class="report-list route-nearby-list" id="routeNearbyList"></div>
+          <div class="report-section-title">Ostrzeżenia</div>
+          <div class="report-list" id="routeWarningList"></div>
+          <div class="report-section-title">Postoje przy trasie</div>
+          <div class="report-list" id="routeStopList"></div>
+        </div>
+      </section>
+      <section class="correction-panel" id="correctionPanel" aria-label="Ręczna korekta odcinka">
+        <div class="correction-head">
+          <span id="correctionTitle">Korekta odcinka</span>
+          <button class="button secondary" id="correctionCloseBtn" type="button">Ukryj</button>
+        </div>
+        <div class="correction-body">
+          <label for="correctionType">Co oznaczyć</label>
+          <select id="correctionType">
+            <option value="climb">Mocny podjazd</option>
+            <option value="descent">Stromy zjazd</option>
+            <option value="badroad">Gorsza droga / szuter</option>
+            <option value="ok">Asfalt / odcinek OK</option>
+          </select>
+          <label for="correctionRange">Zakres od kliknięcia: <strong id="correctionRangeOut">1.0 km</strong></label>
+          <input id="correctionRange" type="range" min="0.2" max="5" step="0.1" value="1">
+          <div class="correction-actions">
+            <button class="button violet" id="correctionApplyBtn" type="button">Zapisz korektę</button>
+            <button class="button secondary" id="correctionRemoveBtn" type="button">Usuń najbliższą</button>
+          </div>
+          <p id="correctionHint">Włącz Korekta i kliknij linię trasy.</p>
+        </div>
+      </section>
+      <section class="weather-panel" id="weatherPanel" aria-label="Pogoda trasy">
+        <div class="weather-head">
+          <span>Pogoda trasy</span>
+          <button class="weather-panel-x" id="weatherCloseBtn" type="button" aria-label="Zamknij pogodę">×</button>
+        </div>
+        <div class="weather-summary" id="weatherSummary">Wyznacz trasę i kliknij Pogoda trasy.</div>
+        <div class="weather-time-control" id="weatherTimeControl">
+          <div class="weather-time-title">Suwak pogody</div>
+          <div class="weather-time-row">
+            <label for="weatherTimeMode">Tryb czasu</label>
+            <select id="weatherTimeMode">
+              <option value="ride">Czas przejazdu</option>
+              <option value="fixed">Wybrana godzina</option>
+            </select>
+          </div>
+          <div class="weather-time-slider-row">
+            <div class="weather-time-slider-head">
+              <span>Godzina prognozy</span>
+              <strong id="weatherTimeLabel">teraz</strong>
+            </div>
+            <input id="weatherTimeOffset" type="range" min="0" max="48" step="1" value="0" aria-label="Suwak godziny prognozy pogody">
+            <div class="weather-time-scale"><span id="weatherScaleNow">--:--</span><span id="weatherScaleMid">--:--</span><span id="weatherScaleEnd">--:--</span></div>
+          </div>
+        </div>
+        <div class="weather-actions"><button class="weather-toggle-btn" id="weatherSliderToggleBtn" type="button">Zwiń suwak</button><button class="weather-toggle-btn" id="weatherRouteMarkersBtn" type="button">Ukryj tablice mapy</button></div>
+        <div class="weather-grid" id="weatherGrid"></div>
+        <div class="weather-foot">Źródło prognozy: Open-Meteo. Wynik jest orientacyjny i liczony według wpisanej średniej jazdy.</div>
+      </section>
+      <button class="weather-widget" id="weatherWidget" type="button" aria-label="Podsumowanie pogody trasy">
+        <span class="weather-widget-x" aria-label="Zamknij pogodę">×</span>
+        <span>Pogoda</span>
+        <strong id="weatherWidgetMain">brak danych</strong>
+        <em id="weatherWidgetSub">kliknij Pogoda trasy</em>
+      </button>
+      <section class="wind-zone-panel hidden" id="windZonePanel" aria-label="Wiatr na trasie"></section>
+      <section class="map-legend" id="mapLegend" aria-label="Legenda mapy">
+        <div class="legend-head"><div class="legend-title">Legenda mapy</div><button class="legend-toggle" id="legendToggleBtn" type="button" aria-label="Zwiń legendę">−</button></div>
+        <div class="legend-group">
+          <div class="legend-label">Linia trasy</div>
+          <div class="legend-row"><span class="legend-line"></span><span>niski ruch / lokalnie / OK</span></div>
+          <div class="legend-row"><span class="legend-line warn"></span><span>uwaga: gorszy odcinek</span></div>
+          <div class="legend-row"><span class="legend-line bad"></span><span>strome, DK/DW albo ryzyko</span></div>
+          <div class="legend-row"><span class="legend-line up"></span><span>mocny podjazd: czerwono-różowy</span></div>
+          <div class="legend-row"><span class="legend-line down"></span><span>zjazd: turkusowy</span></div>
+          <div class="legend-row"><span class="legend-line manual"></span><span>ręczna korekta użytkownika</span></div>
+          <div class="legend-row"><span class="legend-fatigue">ciężko</span><span>ostry podjazd / trudna końcówka</span></div>
+          <div class="legend-row"><span class="weather-hazard-marker soft"><em>☔</em><strong>POG</strong></span><span>trudniejsze warunki pogodowe na trasie</span></div>
+          <div class="legend-row"><span class="weather-route-marker compact soft legend-weather-sample"><span class="weather-route-top"><em>🌡</em><strong>18°</strong></span><span class="weather-route-rain">☔ 20%</span><span class="weather-route-wind" style="--wind-rot:90deg"><i>➤</i><b>14</b></span></span><span>tablica pogody; przy oddalaniu zostaje sama temperatura</span></div>
+          <div class="legend-row"><span class="shop-marker">SK</span><span>sklep spożywczy / market</span></div>
+            <div class="legend-row"><span class="attraction-marker">AT</span><span>atrakcja / zabytek / punkt widokowy</span></div>
+            <div class="legend-row"><span class="lodging-marker">NO</span><span>nocleg: hotel, agroturystyka, camping, hostel</span></div>
+        </div>
+      </section>
+      <section class="topbar">
+        <div class="metric"><span>Dystans <span class="help" tabindex="0" data-tip="Realna długość wytyczonej trasy po drogach.">?</span></span><strong id="metricDistance">0 km</strong></div>
+        <div class="metric"><span>Czas <span class="help" tabindex="0" data-tip="Szacowany czas według wpisanej średniej prędkości.">?</span></span><strong id="metricTime">0:00</strong></div>
+        <div class="metric"><span>Podjazdy <span class="help" tabindex="0" data-tip="Suma metrów przewyższenia pod górę z profilu wysokości.">?</span></span><strong id="metricAscent">0 m</strong></div>
+        <div class="metric"><span>Max % <span class="help" tabindex="0" data-tip="Największe wykryte nachylenie na profilu wysokości.">?</span></span><strong id="metricGrade">0.0%</strong></div>
+        <div class="metric"><span>Promień <span class="help" tabindex="0" data-tip="Najdalszy punkt trasy od startu. Przy obszarze to tylko informacja, nie limit.">?</span></span><strong id="metricRadius">0 km</strong></div>
+        <div class="metric"><span>Drogi <span class="help" tabindex="0" data-tip="Procent ryzyka drogowego: udział głównych, niepewnych, gruntowych albo mniej przyjaznych odcinków według OSM.">?</span></span><strong id="metricRoadRisk">0%</strong></div>
+        <div class="metric"><span>Las <span class="help" tabindex="0" data-tip="Szacowana długość odcinków przechodzących przez las lub teren zalesiony według OSM.">?</span></span><strong id="metricForest">0 km</strong></div>
+        <div class="metric"><span>Kcal <span class="help" tabindex="0" data-tip="Orientacyjne kalorie liczone z dystansu treningu, masy rowerzysty, typu roweru i przewyższeń.">?</span></span><strong id="metricCalories">0</strong></div>
+      </section>
+      <section class="profile-panel">
+        <div class="profile-head">
+          <span>Profil wysokości <span class="help" tabindex="0" data-tip="Wykres wysokości trasy. Po najechaniu pokazuje dystans, wysokość i nachylenie procentowe w danym miejscu.">?</span></span>
+          <button class="quality-badge" id="qualityBadge" type="button" aria-label="Otwórz raport trasy">Jakość trasy - brak</button>
+          <span class="help" id="qualityHelp" tabindex="0" data-tip="Jakość trasy - brak: po wyznaczeniu trasy pokażę, czy profil jest łagodny, czy są mocne podjazdy, ryzykowne drogi, las albo grunt/szuter.">?</span>
+          <div class="profile-tools" aria-label="Zoom profilu wysokości">
+            <button class="profile-zoom-button" id="profileZoomOutBtn" type="button" title="Oddal profil">−</button>
+            <span id="profileZoomLabel">100%</span>
+            <button class="profile-zoom-button" id="profileZoomInBtn" type="button" title="Przybliż profil">+</button>
+            <button class="profile-zoom-button" id="profileZoomResetBtn" type="button" title="Reset zoomu">100</button>
+            <button class="profile-zoom-button profile-auto-button" id="profileAutoPlayBtn" type="button" title="Auto play po trasie">▶ Auto</button>
+            <button class="profile-zoom-button profile-auto-stop" id="profileAutoStopBtn" type="button" title="Zatrzymaj Auto Play">■</button>
+          </div>
+          <span id="profileInfo">brak danych</span>
+        </div>
+        <canvas id="profileCanvas"></canvas>
+      </section>
+    </main>
+    <div class="status" id="status">Gotowe. Ustaw start albo użyj GPS.</div>
+    <div class="global-tip" id="globalTip" role="tooltip" aria-hidden="true"></div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="app.js?v=route-engine-pro-custom-distance-2026-08-09-v37"></script>
+    <script src="register-sw.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

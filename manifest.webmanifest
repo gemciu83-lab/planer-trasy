@@ -1,0 +1,41 @@
+﻿{
+  "name": "Planer Trasy Turystyczny",
+  "short_name": "Planer Trasy",
+  "description": "Mobilny planer tras rowerowych z kontrola trasy, sklepami przy trasie, odporniejszym profilem wysokosci, pogoda, GPS, OSM i GPX.",
+  "lang": "pl",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#02030a",
+  "theme_color": "#050711",
+  "icons": [
+    {
+      "src": "ikona_rower_planer.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "ikona_rower_planer.ico",
+      "sizes": "48x48 64x64 128x128 256x256",
+      "type": "image/x-icon"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Planer trasy",
+      "short_name": "Planer",
+      "description": "Otworz planowanie trasy.",
+      "url": "./index.html",
+      "icons": [
+        {
+          "src": "ikona_rower_planer.svg",
+          "sizes": "any",
+          "type": "image/svg+xml"
+        }
+      ]
+    }
+  ]
+}
+

@@ -1,0 +1,231 @@
+﻿PLANER TRASY - PELNA INSTRUKCJA
+
+1. Najprostszy start
+
+1. Otworz Planer Trasy.
+2. Kliknij Uzyj mojej lokalizacji GPS.
+3. Program ustawi punkt S, czyli start.
+4. Wpisz dystans, np. 80 albo 100 km.
+5. Wybierz tryb trasy:
+   - Zbalansowany - normalny kompromis.
+   - Szosowo - asfalt, lokalne drogi, mniej lasu i gruntu.
+   - Przygoda - wiecej lasu/szutru, ale nadal z kontrola ryzyka.
+6. Kliknij Szukaj plaskiej petli albo Szukaj trasy z podjazdem.
+7. Po policzeniu wybierz wariant z panelu Najlepsze warianty.
+
+2. Co oznaczaja najwazniejsze pola
+
+Dystans km
+Docelowa dlugosc trasy. Wynik nie musi byc idealny, bo trasa musi isc po realnych drogach.
+
+Promien km
+Jak daleko od startu program ma szukac petli. Jesli narysujesz obszar, obszar jest wazniejszy niz promien.
+
+Petle
+Ile razy powtarzasz te sama petle w treningu. Przyklad: trasa 20 km x 5 petli = trening 100 km.
+
+Waga plaskosci
+Im wieksza, tym program mocniej unika podjazdow. Dobre do spokojnych, plaskich tras.
+
+Max %
+Maksymalne akceptowane nachylenie. Odcinki powyzej tej wartosci dostaja kare.
+
+Cel podjazdu %
+Jesli wpiszesz 0, program nie wymusza podjazdow. Jesli wpiszesz np. 8 albo 10, program szuka wariantu z mocniejszym podjazdem, jesli teren i drogi na to pozwalaja.
+
+Warianty tras
+Ile propozycji program ma przeliczyc. Mniej wariantow = szybciej. Wiecej wariantow = wieksza szansa na lepsza trase.
+
+3. Opcje drog
+
+DK
+Zaznaczone oznacza: unikaj drog krajowych.
+
+DW
+Zaznaczone oznacza: unikaj drog wojewodzkich.
+
+Las
+Zaznaczone oznacza: mocno odrzucaj las, szczegolnie dukty, piach i szuter przez las.
+
+Asfalt
+Zaznaczone oznacza: preferuj asfalt i drogi utwardzone.
+
+Rowerowe
+Zaznaczone oznacza: premiuj sciezki i oznaczenia rowerowe z OpenStreetMap.
+
+4. Petla
+
+Tryb Petla sluzy do robienia trasy, ktora zaczyna i konczy sie w punkcie S.
+
+Najlepsza metoda:
+1. Ustaw start z GPS albo wpisz adres.
+2. Wybierz dystans.
+3. Ustaw promien.
+4. Wybierz tryb trasy.
+5. Kliknij Szukaj plaskiej petli.
+6. Sprawdz warianty.
+7. Jesli trasa idzie zle, przeciagaj punkty albo dodaj punkt na linii trasy.
+
+5. Start -> Meta
+
+Tryb Start -> Meta sluzy do jazdy od punktu S do punktu M.
+
+Najlepsza metoda:
+1. Ustaw S, czyli start.
+2. Wybierz Start -> Meta.
+3. Ustaw M:
+   - wpisz adres mety,
+   - albo kliknij Meta z mapy,
+   - albo kliknij prawym przyciskiem myszy na mapie.
+4. Przy M pojawi sie dymek:
+   - Opcja 1: najblizsza trasa S->M.
+   - Opcja 2: trasa wedlug wpisanego dystansu.
+5. Po przesunieciu M kliknij Przelicz A->B albo pozwol programowi przeliczyc automatycznie.
+
+6. Wlasna trasa
+
+Tryb Wlasna trasa sluzy do recznego budowania przejazdu punkt po punkcie.
+
+Najlepsza metoda:
+1. Ustaw S, czyli start, z GPS, adresu albo przyciskiem Start z mapy.
+2. Wybierz Typ trasy: Wlasna trasa.
+3. Klikaj na mapie kolejne miejsca, przez ktore chcesz jechac.
+4. Kazdy klik dodaje nowy punkt i od razu laczy go szkicem z poprzednim punktem.
+5. Program przelicza trase po drogach chwile po ostatnim kliknieciu, zeby mozna bylo szybko dodac kilka punktow naraz.
+6. Punkty mozesz przeciagac albo usuwac tak jak w normalnej trasie.
+
+Ten tryb nie uzywa zasad generatora, promienia, wariantow ani unikania DK/DW/lasu. Ty wskazujesz punkty, a program liczy przejazd po drogach miedzy nimi.
+
+7. Edycja trasy
+
+Dodaj punkt
+Pozwala kliknac na trasie i dodac punkt posredni.
+
+Przeciaganie punktow
+Punkty mozna przesuwac, zeby ominac piach, las, slaba droge albo miejsce, ktore znasz z praktyki.
+
+Usuwanie punktu
+Kliknij punkt i wybierz usuniecie, albo uzyj cofania ostatniego punktu.
+
+Wyczysc trase
+Usuwa aktualna trase, ale zostawia start.
+
+8. Obszar wyszukiwania
+
+Rysuj obszar sluzy do wskazania terenu, w ktorym program ma szukac petli.
+
+Na komputerze:
+1. Kliknij Rysuj obszar.
+2. Przytrzymaj prawy przycisk myszy.
+3. Obrysuj teren.
+4. Pusc przycisk.
+5. Kliknij Szukaj plaskiej petli.
+
+Na telefonie:
+1. Kliknij Rysuj obszar.
+2. Przeciagaj palcem po mapie i obrysuj teren.
+3. Oderwij palec od ekranu.
+4. Program zapisze obszar i ustawi start petli w jego srodku.
+5. Kliknij Szukaj plaskiej petli.
+
+W czasie rysowania obszaru mapa celowo przestaje sie przesuwac, zeby palec rysowal obrys zamiast przesuwac podklad.
+
+9. Profil wysokosci i ikonki podjazdow
+
+Profil wysokosci pokazuje przebieg wysokosci trasy.
+
+Kolory:
+- zloto / pomarancz - gorszy albo mniej pewny odcinek,
+- czerwien / roz - mocniejszy podjazd,
+- turkus - zjazd,
+- fiolet / niebieski - spokojniejszy odcinek.
+
+Ikonki podjazdow na mapie pokazuja mocniejsze dodatnie nachylenia. Sa liczone z profilu wysokosci, czyli moga byc orientacyjne, ale pomagaja szybko zobaczyc, gdzie bedzie ciezszy fragment.
+
+Jesli wczytany GPX nie ma zapisanych wysokosci, program pobiera profil z kilku zewnetrznych modeli wysokosci. Najpierw probuje dokladniej, a jesli serwer odrzuca zapytania, schodzi do mniejszej liczby probek zamiast od razu konczyc bledem. Do czasu pobrania profil i oznaczenia trudnosci moga byc orientacyjne.
+
+Oznaczenia trudnych odcinkow
+Znaczniki typu ciezko / podjazd / koncowka sa pokazane na mapie i w legendzie. Wskazuja miejsca, ktore moga mocniej zmeczyc:
+- dluzszy podjazd,
+- mocniejszy procent,
+- kilka podjazdow blisko siebie,
+- trudniejszy fragment pozniej na trasie.
+
+10. Pogoda trasy
+
+Pogoda trasy pobiera prognoze Open-Meteo dla poprzedniego spokojnego podzialu trasy: start, 25%, 50%, 75% i koniec.
+
+Program pobiera punkty po kolei i trzyma wynik w pamieci przez okolo 10 minut, zeby nie przeciÄ…ĹĽac API. Jesli Open-Meteo odpowie limitem HTTP 429, program probuje awaryjnie pobrac prognoze z MET Norway. W awaryjnej prognozie ryzyko opadu jest orientacyjne.
+
+Program bierze pod uwage wpisana srednia jazdy, wiec dla kazdego punktu pokazuje pogode na orientacyjna godzine dojazdu.
+
+Panel pokazuje:
+- temperature,
+- ryzyko deszczu,
+- opad w mm,
+- wiatr,
+- porywy,
+- czy wiatr bedzie w twarz, boczny czy w plecy.
+
+Prognoza jest orientacyjna, ale pomaga ocenic czy lepiej jechac teraz, pozniej albo zmienic kierunek petli.
+
+Male okienko pogody na mapie pokazuje skrot: zakres temperatur, najwieksze ryzyko deszczu, wiatr i porywy. Klikniecie w okienko otwiera pelny panel pogody.
+
+11. GPX
+
+Zapisz GPX
+Pobiera trase do pliku, ktory mozna wgrac do licznika, zegarka albo innej aplikacji.
+
+Wczytaj GPX
+Pozwala wczytac cudza trase i potem ja edytowac na mapie.
+
+GPX jako pelny trening
+Jesli masz kilka petli, eksport GPX moze zapisac caly trening z powtorzeniami.
+
+12. PNG
+
+Kopiuj PNG
+Kopiuje obraz mapy z profilem wysokosci do schowka.
+
+Pobierz PNG
+Zapisuje obraz mapy z profilem wysokosci jako plik.
+
+13. Zapis projektu
+
+Zapisz projekt
+Zapisuje ustawienia, punkty, obszar, trase i profil do pliku JSON, zeby pozniej wczytac prace w planerze. To nie jest GPX do licznika.
+
+Jesli chcesz zapisac slad GPX do licznika, zegarka albo innej aplikacji, uzyj przycisku Zapisz GPX.
+
+Wczytaj projekt
+Wczytuje zapisany projekt i przywraca prace.
+
+14. Ograniczenia programu
+
+Program korzysta z zewnetrznych danych:
+- OpenStreetMap,
+- OSRM,
+- Overpass,
+- zrodel wysokosci DEM.
+
+Dlatego:
+- internet jest potrzebny,
+- wynik moze nie byc idealny,
+- dane o nawierzchni moga byc niepelne,
+- profil wysokosci jest orientacyjny,
+- trasa moze wymagac recznej korekty przez uzytkownika.
+
+Najwazniejsza zasada:
+Program proponuje trase, ale rowerzysta zna teren. Jesli wiesz, ze droga jest zla, przeciagaj trase recznie.
+
+16. Dolny panel ustawien na telefonie
+
+Na telefonie ustawienia sa schowane w dolnym panelu.
+
+1. Kliknij Ustawienia trasy na dole ekranu.
+2. Zmien dystans, tryb, warianty, asfalt, las, DK/DW itd.
+3. Kliknij Zamknij ustawienia.
+4. Pracuj dalej na mapie.
+
+To zostawia mape jako glowny ekran, a ustawienia nie zaslaniaja stale trasy.
+
